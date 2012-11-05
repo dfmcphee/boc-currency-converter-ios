@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A19214741F4888A34B5E59 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 748AC42718F04B3C96E06D56 /* libPods.a */; };
+		F2217E4C1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2217E4A1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard */; };
+		F26EDE0C1645BC9300ADBDB6 /* FromTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26EDE0B1645BC9300ADBDB6 /* FromTableViewController.m */; };
 		F2AAB1E31644982C005545D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AAB1E21644982C005545D2 /* UIKit.framework */; };
 		F2AAB1E51644982C005545D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AAB1E41644982C005545D2 /* Foundation.framework */; };
 		F2AAB1E71644982C005545D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AAB1E61644982C005545D2 /* CoreGraphics.framework */; };
@@ -19,17 +22,36 @@
 		F2AAB1FC1644982D005545D2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2AAB1FA1644982D005545D2 /* MainStoryboard_iPhone.storyboard */; };
 		F2AAB1FF1644982D005545D2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2AAB1FD1644982D005545D2 /* MainStoryboard_iPad.storyboard */; };
 		F2AAB2021644982D005545D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AAB2011644982D005545D2 /* ViewController.m */; };
+		F2C4E8EE1646D640006764D2 /* ToTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C4E8ED1646D640006764D2 /* ToTableViewController.m */; };
+		F2F30D3A1646E28A00970CBF /* iphone-5-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D391646E28A00970CBF /* iphone-5-bg.png */; };
+		F2F30D3D1646E3BF00970CBF /* convert-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D3C1646E3BF00970CBF /* convert-btn.png */; };
+		F2F30D401646EDCF00970CBF /* convert-btn-active.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D3E1646EDCF00970CBF /* convert-btn-active.png */; };
+		F2F30D411646EDCF00970CBF /* convert-btn-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D3F1646EDCF00970CBF /* convert-btn-pressed.png */; };
+		F2F30D4A1646F21200970CBF /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D421646F21200970CBF /* Icon-72.png */; };
+		F2F30D4B1646F21200970CBF /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D431646F21200970CBF /* Icon-72@2x.png */; };
+		F2F30D4C1646F21200970CBF /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D441646F21200970CBF /* Icon-Small-50.png */; };
+		F2F30D4D1646F21200970CBF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D451646F21200970CBF /* Icon-Small.png */; };
+		F2F30D4E1646F21200970CBF /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D461646F21200970CBF /* Icon-Small@2x.png */; };
+		F2F30D4F1646F21200970CBF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D471646F21200970CBF /* Icon.png */; };
+		F2F30D501646F21200970CBF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D481646F21200970CBF /* Icon@2x.png */; };
+		F2F30D511646F21200970CBF /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D491646F21200970CBF /* iTunesArtwork */; };
+		F2F30D531646F33200970CBF /* exchng-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F30D521646F33200970CBF /* exchng-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F2AAB1DE1644982C005545D2 /* convertr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = convertr.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2AAB1E21644982C005545D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F2AAB1E41644982C005545D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F2AAB1E61644982C005545D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F2AAB1EA1644982C005545D2 /* convertr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "convertr-Info.plist"; sourceTree = "<group>"; };
+		748AC42718F04B3C96E06D56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1EB56C612F4EAEB2130DFE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F2217E4B1647000D006BDC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone_5.storyboard; sourceTree = "<group>"; };
+		F26EDE0A1645BC9300ADBDB6 /* FromTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromTableViewController.h; sourceTree = "<group>"; };
+		F26EDE0B1645BC9300ADBDB6 /* FromTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromTableViewController.m; sourceTree = "<group>"; };
+		F2AAB1DE1644982C005545D2 /* Exchng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exchng.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2AAB1E21644982C005545D2 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F2AAB1E41644982C005545D2 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F2AAB1E61644982C005545D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F2AAB1EA1644982C005545D2 /* Exchng-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Exchng-Info.plist"; sourceTree = "<group>"; };
 		F2AAB1EC1644982C005545D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2AAB1EE1644982C005545D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F2AAB1F01644982C005545D2 /* convertr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "convertr-Prefix.pch"; sourceTree = "<group>"; };
+		F2AAB1F01644982C005545D2 /* Exchng-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Exchng-Prefix.pch"; sourceTree = "<group>"; };
 		F2AAB1F11644982C005545D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2AAB1F21644982C005545D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F2AAB1F41644982C005545D2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -39,6 +61,21 @@
 		F2AAB1FE1644982D005545D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		F2AAB2001644982D005545D2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F2AAB2011644982D005545D2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2C4E8EC1646D640006764D2 /* ToTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToTableViewController.h; sourceTree = "<group>"; };
+		F2C4E8ED1646D640006764D2 /* ToTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToTableViewController.m; sourceTree = "<group>"; };
+		F2F30D391646E28A00970CBF /* iphone-5-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-5-bg.png"; sourceTree = "<group>"; };
+		F2F30D3C1646E3BF00970CBF /* convert-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convert-btn.png"; sourceTree = "<group>"; };
+		F2F30D3E1646EDCF00970CBF /* convert-btn-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convert-btn-active.png"; sourceTree = "<group>"; };
+		F2F30D3F1646EDCF00970CBF /* convert-btn-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convert-btn-pressed.png"; sourceTree = "<group>"; };
+		F2F30D421646F21200970CBF /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		F2F30D431646F21200970CBF /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		F2F30D441646F21200970CBF /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		F2F30D451646F21200970CBF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		F2F30D461646F21200970CBF /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		F2F30D471646F21200970CBF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F2F30D481646F21200970CBF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F2F30D491646F21200970CBF /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		F2F30D521646F33200970CBF /* exchng-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exchng-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +86,7 @@
 				F2AAB1E31644982C005545D2 /* UIKit.framework in Frameworks */,
 				F2AAB1E51644982C005545D2 /* Foundation.framework in Frameworks */,
 				F2AAB1E71644982C005545D2 /* CoreGraphics.framework in Frameworks */,
+				02A19214741F4888A34B5E59 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +96,17 @@
 		F2AAB1D31644982C005545D2 = {
 			isa = PBXGroup;
 			children = (
-				F2AAB1E81644982C005545D2 /* convertr */,
+				F2AAB1E81644982C005545D2 /* exchng */,
 				F2AAB1E11644982C005545D2 /* Frameworks */,
 				F2AAB1DF1644982C005545D2 /* Products */,
+				7C1EB56C612F4EAEB2130DFE /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		F2AAB1DF1644982C005545D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2AAB1DE1644982C005545D2 /* convertr.app */,
+				F2AAB1DE1644982C005545D2 /* Exchng.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,31 +117,51 @@
 				F2AAB1E21644982C005545D2 /* UIKit.framework */,
 				F2AAB1E41644982C005545D2 /* Foundation.framework */,
 				F2AAB1E61644982C005545D2 /* CoreGraphics.framework */,
+				748AC42718F04B3C96E06D56 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F2AAB1E81644982C005545D2 /* convertr */ = {
+		F2AAB1E81644982C005545D2 /* exchng */ = {
 			isa = PBXGroup;
 			children = (
+				F2F30D421646F21200970CBF /* Icon-72.png */,
+				F2F30D521646F33200970CBF /* exchng-logo.png */,
+				F2F30D431646F21200970CBF /* Icon-72@2x.png */,
+				F2F30D441646F21200970CBF /* Icon-Small-50.png */,
+				F2F30D451646F21200970CBF /* Icon-Small.png */,
+				F2F30D461646F21200970CBF /* Icon-Small@2x.png */,
+				F2F30D471646F21200970CBF /* Icon.png */,
+				F2F30D481646F21200970CBF /* Icon@2x.png */,
+				F2F30D491646F21200970CBF /* iTunesArtwork */,
+				F2F30D3E1646EDCF00970CBF /* convert-btn-active.png */,
+				F2F30D3F1646EDCF00970CBF /* convert-btn-pressed.png */,
+				F2F30D3C1646E3BF00970CBF /* convert-btn.png */,
+				F2F30D391646E28A00970CBF /* iphone-5-bg.png */,
 				F2AAB1F11644982C005545D2 /* AppDelegate.h */,
 				F2AAB1F21644982C005545D2 /* AppDelegate.m */,
 				F2AAB1FA1644982D005545D2 /* MainStoryboard_iPhone.storyboard */,
+				F2217E4A1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard */,
 				F2AAB1FD1644982D005545D2 /* MainStoryboard_iPad.storyboard */,
 				F2AAB2001644982D005545D2 /* ViewController.h */,
 				F2AAB2011644982D005545D2 /* ViewController.m */,
+				F26EDE0A1645BC9300ADBDB6 /* FromTableViewController.h */,
+				F26EDE0B1645BC9300ADBDB6 /* FromTableViewController.m */,
+				F2C4E8EC1646D640006764D2 /* ToTableViewController.h */,
+				F2C4E8ED1646D640006764D2 /* ToTableViewController.m */,
 				F2AAB1E91644982C005545D2 /* Supporting Files */,
 			);
+			name = exchng;
 			path = convertr;
 			sourceTree = "<group>";
 		};
 		F2AAB1E91644982C005545D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F2AAB1EA1644982C005545D2 /* convertr-Info.plist */,
+				F2AAB1EA1644982C005545D2 /* Exchng-Info.plist */,
 				F2AAB1EB1644982C005545D2 /* InfoPlist.strings */,
 				F2AAB1EE1644982C005545D2 /* main.m */,
-				F2AAB1F01644982C005545D2 /* convertr-Prefix.pch */,
+				F2AAB1F01644982C005545D2 /* Exchng-Prefix.pch */,
 				F2AAB1F41644982C005545D2 /* Default.png */,
 				F2AAB1F61644982C005545D2 /* Default@2x.png */,
 				F2AAB1F81644982D005545D2 /* Default-568h@2x.png */,
@@ -113,21 +172,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F2AAB1DD1644982C005545D2 /* convertr */ = {
+		F2AAB1DD1644982C005545D2 /* Exchng */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2AAB2051644982D005545D2 /* Build configuration list for PBXNativeTarget "convertr" */;
+			buildConfigurationList = F2AAB2051644982D005545D2 /* Build configuration list for PBXNativeTarget "Exchng" */;
 			buildPhases = (
 				F2AAB1DA1644982C005545D2 /* Sources */,
 				F2AAB1DB1644982C005545D2 /* Frameworks */,
 				F2AAB1DC1644982C005545D2 /* Resources */,
+				0F27F3E840524E00ABFB7A8B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = convertr;
+			name = Exchng;
 			productName = convertr;
-			productReference = F2AAB1DE1644982C005545D2 /* convertr.app */;
+			productReference = F2AAB1DE1644982C005545D2 /* Exchng.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +199,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = 2pages;
 			};
-			buildConfigurationList = F2AAB1D81644982C005545D2 /* Build configuration list for PBXProject "convertr" */;
+			buildConfigurationList = F2AAB1D81644982C005545D2 /* Build configuration list for PBXProject "Exchng" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -151,7 +211,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F2AAB1DD1644982C005545D2 /* convertr */,
+				F2AAB1DD1644982C005545D2 /* Exchng */,
 			);
 		};
 /* End PBXProject section */
@@ -167,10 +227,41 @@
 				F2AAB1F91644982D005545D2 /* Default-568h@2x.png in Resources */,
 				F2AAB1FC1644982D005545D2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F2AAB1FF1644982D005545D2 /* MainStoryboard_iPad.storyboard in Resources */,
+				F2F30D3A1646E28A00970CBF /* iphone-5-bg.png in Resources */,
+				F2F30D3D1646E3BF00970CBF /* convert-btn.png in Resources */,
+				F2F30D401646EDCF00970CBF /* convert-btn-active.png in Resources */,
+				F2F30D411646EDCF00970CBF /* convert-btn-pressed.png in Resources */,
+				F2F30D4A1646F21200970CBF /* Icon-72.png in Resources */,
+				F2F30D4B1646F21200970CBF /* Icon-72@2x.png in Resources */,
+				F2F30D4C1646F21200970CBF /* Icon-Small-50.png in Resources */,
+				F2F30D4D1646F21200970CBF /* Icon-Small.png in Resources */,
+				F2F30D4E1646F21200970CBF /* Icon-Small@2x.png in Resources */,
+				F2F30D4F1646F21200970CBF /* Icon.png in Resources */,
+				F2F30D501646F21200970CBF /* Icon@2x.png in Resources */,
+				F2F30D511646F21200970CBF /* iTunesArtwork in Resources */,
+				F2F30D531646F33200970CBF /* exchng-logo.png in Resources */,
+				F2217E4C1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F27F3E840524E00ABFB7A8B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2AAB1DA1644982C005545D2 /* Sources */ = {
@@ -180,12 +271,22 @@
 				F2AAB1EF1644982C005545D2 /* main.m in Sources */,
 				F2AAB1F31644982C005545D2 /* AppDelegate.m in Sources */,
 				F2AAB2021644982D005545D2 /* ViewController.m in Sources */,
+				F26EDE0C1645BC9300ADBDB6 /* FromTableViewController.m in Sources */,
+				F2C4E8EE1646D640006764D2 /* ToTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F2217E4A1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2217E4B1647000D006BDC5C /* en */,
+			);
+			name = MainStoryboard_iPhone_5.storyboard;
+			sourceTree = "<group>";
+		};
 		F2AAB1EB1644982C005545D2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -267,10 +368,11 @@
 		};
 		F2AAB2061644982D005545D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1EB56C612F4EAEB2130DFE /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "convertr/convertr-Prefix.pch";
-				INFOPLIST_FILE = "convertr/convertr-Info.plist";
+				GCC_PREFIX_HEADER = "convertr/Exchng-Prefix.pch";
+				INFOPLIST_FILE = "convertr/Exchng-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -278,10 +380,11 @@
 		};
 		F2AAB2071644982D005545D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1EB56C612F4EAEB2130DFE /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "convertr/convertr-Prefix.pch";
-				INFOPLIST_FILE = "convertr/convertr-Info.plist";
+				GCC_PREFIX_HEADER = "convertr/Exchng-Prefix.pch";
+				INFOPLIST_FILE = "convertr/Exchng-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -290,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F2AAB1D81644982C005545D2 /* Build configuration list for PBXProject "convertr" */ = {
+		F2AAB1D81644982C005545D2 /* Build configuration list for PBXProject "Exchng" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2AAB2031644982D005545D2 /* Debug */,
@@ -299,13 +402,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2AAB2051644982D005545D2 /* Build configuration list for PBXNativeTarget "convertr" */ = {
+		F2AAB2051644982D005545D2 /* Build configuration list for PBXNativeTarget "Exchng" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2AAB2061644982D005545D2 /* Debug */,
 				F2AAB2071644982D005545D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
