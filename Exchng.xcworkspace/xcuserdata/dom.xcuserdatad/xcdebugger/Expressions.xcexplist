@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[FromTableViewController tableView:cellForRowAtIndexPath:]:FromTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "rates">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FromTableViewController filterContentForSearchText:scope:]:FromTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[rate objectForKey:@&quot;label&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ConverterViewController.h"
+#import "MBProgressHUD.h"
+#import "Reachability.h"
 
 @implementation AppDelegate
 
@@ -46,6 +49,27 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    ConverterViewController* mainController = (ConverterViewController*)  self.window.rootViewController;
+    
+    [MBProgressHUD showHUDAddedTo:mainController.view animated:YES];
+    
+    // allocate a reachability object
+    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.deploydapp.com"];
+    
+    // set the blocks
+    reach.reachableBlock = ^(Reachability*reach)
+    {
+        [mainController loadRates];
+    };
+    
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        [MBProgressHUD hideHUDForView:mainController.view animated:YES];
+        [mainController showAlert];
+    };
+    
+    // start the notifier which will cause the reachability object to retain itself!
+    [reach startNotifier];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
