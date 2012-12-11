@@ -49,6 +49,24 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    ConverterViewController* mainController = (ConverterViewController*)  self.window.rootViewController;
+    
+    // allocate a reachability object
+    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.deploydapp.com"];
+    
+    // set the blocks
+    reach.reachableBlock = ^(Reachability*reach)
+    {
+        [mainController loadRates];
+    };
+    
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        [mainController showAlert];
+    };
+    
+    // start the notifier which will cause the reachability object to retain itself!
+    [reach startNotifier];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
