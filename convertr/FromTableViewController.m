@@ -95,6 +95,8 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     
     cell.textLabel.textColor = [UIColor whiteColor];
     
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    
     return cell;
 }
 
@@ -145,8 +147,6 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller
-    
     ConverterViewController *parent = (ConverterViewController*)[self presentingViewController];
     NSString *shortcode;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
@@ -160,7 +160,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
         }
         
         shortcode = [[self.searchResults objectAtIndex:indexPath.row] objectForKey:@"shortcode"];
-        ((AppDelegate *)[UIApplication sharedApplication].delegate).selectedTo = [rates indexOfObject:[searchResults objectAtIndex:indexPath.row]];
+        ((AppDelegate *)[UIApplication sharedApplication].delegate).selectedFrom = [rates indexOfObject:[searchResults objectAtIndex:indexPath.row]];
     }
     
     else {
@@ -177,6 +177,8 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     NSString *flag = [@[shortcode, @".png"] componentsJoinedByString:@""];
     
     parent.fromFlag.image = [UIImage imageNamed:flag];
+    
+    [parent convert:parent];
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

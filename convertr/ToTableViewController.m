@@ -98,6 +98,8 @@ shouldReloadTableForSearchString:(NSString *)searchString
     
     cell.textLabel.textColor = [UIColor whiteColor];
     
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    
     return cell;
 }
 
@@ -185,6 +187,8 @@ shouldReloadTableForSearchString:(NSString *)searchString
     NSString *flag = [@[shortcode, @".png"] componentsJoinedByString:@""];
     
     parent.toFlag.image = [UIImage imageNamed:flag];
+    
+    [parent convert:parent];
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

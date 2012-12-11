@@ -72,7 +72,7 @@
             AppDelegate *delegate = ((AppDelegate *)[UIApplication sharedApplication].delegate);
             delegate.rates = sorted;
             
-            //[self createAccordionView];
+            [self convert:self];
         } else {
             // Handle Error
             [self showAlert];
@@ -97,6 +97,28 @@
     sleep(3);
 }
 
+- (void)checkConectivity {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    // allocate a reachability object
+    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.jit.su"];
+    
+    // set the blocks
+    reach.reachableBlock = ^(Reachability*reach)
+    {
+        [self loadRates];
+    };
+    
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self showAlert];
+    };
+    
+    // start the notifier which will cause the reachability object to retain itself!
+    [reach startNotifier];
+}
+
 - (IBAction)convert:(id)sender {
     NSInteger selectedFrom = ((AppDelegate *)[UIApplication sharedApplication].delegate).selectedFrom;
     NSInteger selectedTo = ((AppDelegate *)[UIApplication sharedApplication].delegate).selectedTo;
@@ -111,6 +133,44 @@
     answer.text = [NSString localizedStringWithFormat:@"%.02f", exchanged];
 }
 
+- (IBAction)refreshButton:(id)sender {
+    [self checkConectivity];
+    
+    [self convert:self];
+}
+
+- (IBAction)swapCurrencies:(id)sender {
+    
+    AppDelegate *delegate = ((AppDelegate *)[UIApplication sharedApplication].delegate);
+    
+    NSInteger selectedFrom = delegate.selectedFrom;
+    NSInteger selectedTo = delegate.selectedTo;
+    
+    delegate.selectedTo = selectedFrom;
+    delegate.selectedFrom = selectedTo;
+    
+    //ConverterViewController *parent = (ConverterViewController*)[self presentingViewController];
+    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+
+    if ([language isEqualToString:@"fr"]) {
+        self.from.text = [[self.rates objectAtIndex:selectedTo] objectForKey:@"labelFR"];
+        self.to.text = [[self.rates objectAtIndex:selectedFrom] objectForKey:@"labelFR"];
+    }
+    else {
+        self.from.text = [[self.rates objectAtIndex:selectedTo] objectForKey:@"label"];
+        self.to.text = [[self.rates objectAtIndex:selectedFrom] objectForKey:@"label"];
+    }
+    
+    NSString *fromShortcode = [[self.rates objectAtIndex:selectedTo] objectForKey:@"shortcode"];
+    NSString *toShortcode = [[self.rates objectAtIndex:selectedFrom] objectForKey:@"shortcode"];
+
+    
+    self.fromFlag.image = [UIImage imageNamed:[@[fromShortcode, @".png"] componentsJoinedByString:@""]];
+    self.toFlag.image = [UIImage imageNamed:[@[toShortcode, @".png"] componentsJoinedByString:@""]];
+    
+    [self convert:self];
+}
+
 -(IBAction)amountReturn:(id)sender {
     [sender resignFirstResponder];
 }
@@ -121,13 +181,8 @@
 
 -(IBAction)finishedEditing:(id)sender {
     value = [amount.text doubleValue];
-    NSNumber *num = [NSNumber numberWithDouble:value];
-    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    [numberFormatter setMaximumFractionDigits:2];
-    [numberFormatter setMinimumFractionDigits:2];
-    NSString *formattedNumberString = [numberFormatter stringFromNumber:num];
-    amount.text = formattedNumberString;
+    amount.text = [NSString localizedStringWithFormat:@"%.02f", value];
+    [self convert:self];
 }
 
 - (void)viewDidLoad {
@@ -149,25 +204,11 @@
     delegate.selectedFrom = 0;
     delegate.selectedTo = 1;
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    value = 1.0;
     
-    // allocate a reachability object
-    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.jit.su"];
+    amount.text = [NSString localizedStringWithFormat:@"%.02f", value];
     
-    // set the blocks
-    reach.reachableBlock = ^(Reachability*reach)
-    {
-        [self loadRates];
-    };
-    
-    reach.unreachableBlock = ^(Reachability*reach)
-    {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        [self showAlert];
-    };
-    
-    // start the notifier which will cause the reachability object to retain itself!
-    [reach startNotifier];
+    [self checkConectivity];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		02A19214741F4888A34B5E59 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 748AC42718F04B3C96E06D56 /* libPods.a */; };
+		F203711916768FD9000B6306 /* Circular-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = F203711616768FD9000B6306 /* Circular-Button.png */; };
+		F203711A16768FD9000B6306 /* Circular-Button-Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F203711716768FD9000B6306 /* Circular-Button-Pressed.png */; };
+		F203711B16768FD9000B6306 /* Circular-Button-Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F203711816768FD9000B6306 /* Circular-Button-Highlighted.png */; };
+		F203711D1676A361000B6306 /* Refresh-Rates-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = F203711C1676A361000B6306 /* Refresh-Rates-Button.png */; };
+		F203711F1676A369000B6306 /* Switch-Currencies-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = F203711E1676A369000B6306 /* Switch-Currencies-Button.png */; };
 		F2217E4C1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2217E4A1647000D006BDC5C /* MainStoryboard_iPhone_5.storyboard */; };
 		F22EF5F51675333B008355FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F22EF5F71675333B008355FC /* Localizable.strings */; };
 		F22EF5F916753534008355FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F22EF5FB16753534008355FC /* Default-568h@2x.png */; };
@@ -107,6 +112,11 @@
 /* Begin PBXFileReference section */
 		748AC42718F04B3C96E06D56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1EB56C612F4EAEB2130DFE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F203711616768FD9000B6306 /* Circular-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circular-Button.png"; sourceTree = "<group>"; };
+		F203711716768FD9000B6306 /* Circular-Button-Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circular-Button-Pressed.png"; sourceTree = "<group>"; };
+		F203711816768FD9000B6306 /* Circular-Button-Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circular-Button-Highlighted.png"; sourceTree = "<group>"; };
+		F203711C1676A361000B6306 /* Refresh-Rates-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Refresh-Rates-Button.png"; sourceTree = "<group>"; };
+		F203711E1676A369000B6306 /* Switch-Currencies-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Switch-Currencies-Button.png"; sourceTree = "<group>"; };
 		F2217E4B1647000D006BDC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone_5.storyboard; sourceTree = "<group>"; };
 		F22EF5F61675333B008355FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F22EF5F816753342008355FC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -298,6 +308,11 @@
 		F2446A2D1673B7B2003ED440 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F203711C1676A361000B6306 /* Refresh-Rates-Button.png */,
+				F203711E1676A369000B6306 /* Switch-Currencies-Button.png */,
+				F203711616768FD9000B6306 /* Circular-Button.png */,
+				F203711716768FD9000B6306 /* Circular-Button-Pressed.png */,
+				F203711816768FD9000B6306 /* Circular-Button-Highlighted.png */,
 				F2F30D491646F21200970CBF /* iTunesArtwork */,
 				F2F30D421646F21200970CBF /* Icon-72.png */,
 				F2F30D431646F21200970CBF /* Icon-72@2x.png */,
@@ -543,6 +558,11 @@
 				F2446A2616730D4A003ED440 /* Default.png in Resources */,
 				F22EF5F51675333B008355FC /* Localizable.strings in Resources */,
 				F28C60491675771E00701B80 /* Default-568h@2x.png in Resources */,
+				F203711916768FD9000B6306 /* Circular-Button.png in Resources */,
+				F203711A16768FD9000B6306 /* Circular-Button-Pressed.png in Resources */,
+				F203711B16768FD9000B6306 /* Circular-Button-Highlighted.png in Resources */,
+				F203711D1676A361000B6306 /* Refresh-Rates-Button.png in Resources */,
+				F203711F1676A369000B6306 /* Switch-Currencies-Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

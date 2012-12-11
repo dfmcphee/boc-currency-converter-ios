@@ -43,8 +43,14 @@
 
 - (IBAction)finishedEditing:(id)sender;
 
+- (IBAction)refreshButton:(id)sender;
+
+- (IBAction)swapCurrencies:(id)sender;
+
 - (void)loadRates;
 
 - (void)showAlert;
+
+- (void)checkConectivity;
 
 @end
