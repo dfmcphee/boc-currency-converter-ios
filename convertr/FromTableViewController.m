@@ -147,7 +147,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ConverterViewController *parent = (ConverterViewController*)[self presentingViewController];
+    ConverterViewController *parent = (ConverterViewController*)((AppDelegate *)[UIApplication sharedApplication].delegate).converter;
     NSString *shortcode;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     
@@ -181,6 +181,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     [parent convert:parent];
     
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [[self valueForKey:@"popoverController"] dismissPopoverAnimated:YES];
 }
 
 @end

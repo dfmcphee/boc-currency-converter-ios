@@ -49,7 +49,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Nog-tP-Y9u" kind="modal" modalPresentationStyle="formSheet" id="jg3-iC-jSv"/>
+                                    <segue destination="Nog-tP-Y9u" kind="popover" popoverAnchorView="QGO-LK-Q8R" id="jg3-iC-jSv">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CAD.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-CU-xbc">
@@ -146,7 +148,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0di-Jj-t9D" kind="modal" modalPresentationStyle="formSheet" id="PtM-qE-2fd"/>
+                                    <segue destination="0di-Jj-t9D" kind="popover" popoverAnchorView="hNr-VG-Tvp" id="PtM-qE-2fd">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="USD.png" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-E8-ziS">
@@ -594,7 +598,7 @@
             <objects>
                 <tableViewController id="Nog-tP-Y9u" customClass="FromTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UDu-bC-SC4">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="20" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="0.78000000000000003" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -644,7 +648,7 @@
             <objects>
                 <tableViewController id="0di-Jj-t9D" customClass="ToTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1QZ-E4-lTk">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="20" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.78000000000000003" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>

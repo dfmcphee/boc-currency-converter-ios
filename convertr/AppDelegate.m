@@ -14,6 +14,7 @@
 @implementation AppDelegate
 
 @synthesize rates;
+@synthesize converter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

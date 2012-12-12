@@ -155,9 +155,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    
-    ConverterViewController *parent = (ConverterViewController*)[self presentingViewController];
+    ConverterViewController *parent = (ConverterViewController*)((AppDelegate *)[UIApplication sharedApplication].delegate).converter;
     NSString *shortcode;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     
@@ -191,6 +189,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
     [parent convert:parent];
     
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [[self valueForKey:@"popoverController"] dismissPopoverAnimated:YES];
 }
 
 @end

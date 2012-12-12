@@ -17,7 +17,7 @@
 
 @end
 
-@implementation ConverterViewController
+@implementation ConverterViewController;
 
 @synthesize rates;
 @synthesize amount;
@@ -257,6 +257,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.modalPresentationStyle = UIModalPresentationCurrentContext;
     
@@ -273,6 +274,7 @@
     AppDelegate *delegate = ((AppDelegate *)[UIApplication sharedApplication].delegate);
     delegate.selectedFrom = 0;
     delegate.selectedTo = 1;
+    delegate.converter = self;
     
     editingColour = [UIColor colorWithRed:0.93 green:0.93 blue:0.93 alpha:1.0];
     

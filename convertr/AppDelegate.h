@@ -13,11 +13,13 @@
     NSArray *rates;
     NSInteger *selectedTo;
     NSInteger *selectedFrom;
+    ConverterViewController *converter;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property (retain, nonatomic) IBOutlet NSArray *rates;
 @property (nonatomic) NSInteger selectedTo;
 @property (nonatomic) NSInteger selectedFrom;
+@property (nonatomic, retain) IBOutlet ConverterViewController *converter;
 
 @end
