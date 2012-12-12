@@ -15,6 +15,8 @@
     
     NSArray *rates;
     double value;
+    BOOL dataLoaded;
+    UIColor *editingColour;
     
     IBOutlet UITextField *amount;
     IBOutlet UILabel *from;
@@ -41,11 +43,25 @@
 
 - (IBAction)backgroundTouched:(id)sender;
 
+- (IBAction)startEditing:(id)sender;
+
 - (IBAction)finishedEditing:(id)sender;
 
 - (IBAction)refreshButton:(id)sender;
 
 - (IBAction)swapCurrencies:(id)sender;
+
+- (IBAction)pressNumberButton:(UIButton*)sender;
+
+- (IBAction)pressCommaButton:(id)sender;
+
+- (IBAction)pressDecimalButton:(id)sender;
+
+- (IBAction)pressClearButton:(id)sender;
+
+- (IBAction)pressBackspaceButton:(id)sender;
+
+- (IBAction)pressConvertButton:(id)sender;
 
 - (void)loadRates;
 

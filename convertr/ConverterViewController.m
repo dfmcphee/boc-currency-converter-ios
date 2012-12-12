@@ -38,7 +38,7 @@
         // Get rates from json service
         NSError *error = nil;
         
-        NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://exchng.jit.su/rates"]];
+        NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://exchng.ca/rates"]];
         
         if (jsonData) {
             
@@ -68,6 +68,8 @@
             
             self.rates = sorted;
             
+            dataLoaded = true;
+            
             // Setup delegate data
             AppDelegate *delegate = ((AppDelegate *)[UIApplication sharedApplication].delegate);
             delegate.rates = sorted;
@@ -86,22 +88,24 @@
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
     
     [self.view addSubview:hud];
-    hud.delegate = self;
+    //Íhud.delegate = self;
     hud.mode = MBProgressHUDModeCustomView;
     hud.labelText = NSLocalizedString(@"ERROR", nil);;
-    [hud showWhileExecuting:@selector(waitForThreeSeconds)
+    [hud showWhileExecuting:@selector(waitForConnection)
                    onTarget:self withObject:nil animated:YES];
 }
 
-- (void)waitForThreeSeconds {
-    sleep(3);
+- (void)waitForConnection {
+    while(!dataLoaded) {
+        
+    }
 }
 
-- (void)checkConectivity {
+- (void)checkConnectivity {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     // allocate a reachability object
-    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.jit.su"];
+    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.ca"];
     
     // set the blocks
     reach.reachableBlock = ^(Reachability*reach)
@@ -131,10 +135,12 @@
     double exchanged = value * exchangeRate;
     
     answer.text = [NSString localizedStringWithFormat:@"%.02f", exchanged];
+    
+    amount.backgroundColor = [UIColor whiteColor];
 }
 
 - (IBAction)refreshButton:(id)sender {
-    [self checkConectivity];
+    [self checkConnectivity];
     
     [self convert:self];
 }
@@ -176,11 +182,75 @@
 }
 
 -(IBAction)backgroundTouched:(id)sender {
-    [amount resignFirstResponder];
+    if (dataLoaded) {
+        [amount resignFirstResponder];
+        amount.backgroundColor = [UIColor whiteColor];
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber *newNumber = [formatter numberFromString:amount.text];
+        value = [newNumber doubleValue];
+        amount.text = [NSString localizedStringWithFormat:@"%.02f", value];
+        [self convert:sender];
+    }
+}
+
+-(IBAction)startEditing:(id)sender {
+    amount.backgroundColor = editingColour;
+    
 }
 
 -(IBAction)finishedEditing:(id)sender {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *newNumber = [formatter numberFromString:amount.text];
+    value = [newNumber doubleValue];
+    amount.text = [NSString localizedStringWithFormat:@"%.02f", value];
+    [self convert:self];
+}
+
+// Buttons for custom iPad keyboard
+
+-(IBAction)pressDecimalButton:(id)sender {
+    if ([amount.text rangeOfString:@"."].location == NSNotFound) {
+        amount.text = [@[amount.text, @"."] componentsJoinedByString:@""];
+        value = [amount.text doubleValue];
+        amount.backgroundColor = editingColour;
+    }
+}
+
+-(IBAction)pressCommaButton:(id)sender {
+    if ([amount.text rangeOfString:@","].location == NSNotFound) {
+        amount.text = [@[amount.text, @","] componentsJoinedByString:@""];
+        value = [amount.text doubleValue];
+        amount.backgroundColor = editingColour;
+    }
+}
+
+-(IBAction)pressBackspaceButton:(id)sender {
+    if ([amount.text length] > 0) {
+        amount.text = [amount.text substringToIndex:[amount.text length]-1];
+        value = [amount.text doubleValue];
+    }
+    amount.backgroundColor = editingColour;
+}
+
+-(IBAction)pressClearButton:(id)sender {
+    amount.text = @"";
+    value = 0;
+    amount.backgroundColor = editingColour;
+}
+
+-(IBAction)pressNumberButton:(UIButton*)sender {
+    amount.text = [@[amount.text, sender.titleLabel.text] componentsJoinedByString:@""];
     value = [amount.text doubleValue];
+    amount.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+}
+
+-(IBAction)pressConvertButton:(id)sender {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *newNumber = [formatter numberFromString:amount.text];
+    value = [newNumber doubleValue];
     amount.text = [NSString localizedStringWithFormat:@"%.02f", value];
     [self convert:self];
 }
@@ -204,11 +274,13 @@
     delegate.selectedFrom = 0;
     delegate.selectedTo = 1;
     
+    editingColour = [UIColor colorWithRed:0.93 green:0.93 blue:0.93 alpha:1.0];
+    
     value = 1.0;
     
     amount.text = [NSString localizedStringWithFormat:@"%.02f", value];
     
-    [self checkConectivity];
+    [self checkConnectivity];
 }
 
 - (void)didReceiveMemoryWarning {

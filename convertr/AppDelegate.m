@@ -52,7 +52,7 @@
     ConverterViewController* mainController = (ConverterViewController*)  self.window.rootViewController;
     
     // allocate a reachability object
-    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.deploydapp.com"];
+    Reachability* reach = [Reachability reachabilityWithHostname:@"exchng.ca"];
     
     // set the blocks
     reach.reachableBlock = ^(Reachability*reach)
