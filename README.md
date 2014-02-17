@@ -1,7 +1,7 @@
-Exchng
+BoC Currency Converter
 =============
 
-A simple currency converter for iOS.
+A simple currency converter for iOS. Exchange rates provided by the Bank of Canada.
 
 Requirements
 -------
@@ -16,7 +16,7 @@ you wish to run the library.
 Getting Started
 ------------
 
-First change in to the project directory and run
+First, from the project directory and run
 
     pod install
 
