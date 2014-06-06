@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DC00434B-36A5-4D38-9AF7-EC2E0673AA1B</string>
+	<string>740FCDA2-099D-4AB9-A830-95B4A77D9110</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Exchng</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7882DD98-4327-4133-AAD8-4EA40A01C7A0</key>
-		<string>https://github.com/dfmcphee/exchng.git</string>
+		<key>1DAF29F7-4332-4D4E-B6A5-C3C4C8D185BD</key>
+		<string>https://github.com/dfmcphee/boc-currency-converter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Exchng.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7882DD98-4327-4133-AAD8-4EA40A01C7A0</key>
+		<key>1DAF29F7-4332-4D4E-B6A5-C3C4C8D185BD</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/dfmcphee/exchng.git</string>
+	<string>https://github.com/dfmcphee/boc-currency-converter.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7882DD98-4327-4133-AAD8-4EA40A01C7A0</string>
+	<string>1DAF29F7-4332-4D4E-B6A5-C3C4C8D185BD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7882DD98-4327-4133-AAD8-4EA40A01C7A0</string>
+			<string>1DAF29F7-4332-4D4E-B6A5-C3C4C8D185BD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>exchng</string>
+			<string>boc-currency-converter</string>
 		</dict>
 	</array>
 </dict>

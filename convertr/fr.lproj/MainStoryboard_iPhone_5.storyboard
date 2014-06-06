@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -438,7 +438,7 @@
                                 <rect key="frame" x="31" y="153" width="259" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Les statistiques présentées dans le site Web de la Banque du Canada proviennent de sources que la Banque juge suffisamment fiables pour être utilisées. La Banque ne peut toutefois garantir ni l’exactitude ni l’intégrité des données issues de ces sources. Elle peut, par ailleurs, modifier périodiquement certaines de ces données sans préavis.  Plus: http://www.banqueducanada.ca/conditions-utilisation-avis/#fx-rates</mutableString>
+                                <mutableString key="text">Les taux de change de la Banque du Canada ne sont que des taux indicatifs établis à partir des moyennes de prix des transactions et d’estimations de cours provenant d’institutions financières. Pour des précisions, veuillez lire toutes les Conditions d’utilisation et avis d’exonération de responsabilité.  Plus: http://www.banqueducanada.ca/conditions-utilisation-avis/#taux-fx</mutableString>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

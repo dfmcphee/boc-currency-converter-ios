@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -439,7 +439,7 @@
                                 <rect key="frame" x="31" y="134" width="259" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Statistical data on the Bank of Canada web site is derived from sources that the Bank considers sufficiently reliable to justify inclusion. However, we cannot guarantee the completeness or accuracy of the data. Also, the Bank of Canada may periodically revise certain data without notice.  Fore more information see  the Bank of Canada's website:  http://www.bankofcanada.ca/terms/#fx-rates</mutableString>
+                                <string key="text">All Bank of Canada exchange rates are indicative rates only, obtained from averages of transaction prices and price quotes from financial institutions. Please read our full terms and conditions for details.  http://www.bankofcanada.ca/terms/#fx-rates</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
