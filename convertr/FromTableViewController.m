@@ -35,7 +35,6 @@
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller
 shouldReloadTableForSearchString:(NSString *)searchString {
     self.searchDisplayController.searchResultsTableView.backgroundColor = [UIColor darkGrayColor];
-    
     [self filterContentForSearchText:searchString
         scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
             objectAtIndex:[self.searchDisplayController.searchBar
@@ -64,10 +63,15 @@ shouldReloadTableForSearchString:(NSString *)searchString {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:currencyIdentifier];
     }
     
+    UIView *selectionColor = [[UIView alloc] init];
+    selectionColor.backgroundColor = [UIColor colorWithRed:(35/255.0) green:(35/255.0) blue:(35/255.0) alpha:1];
+    cell.selectedBackgroundView = selectionColor;
+    
     NSString *shortcode;
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
+        cell.backgroundColor = [UIColor darkGrayColor];
         if ([language isEqualToString:@"fr"]) {
             cell.textLabel.text = [[self.searchResults objectAtIndex:indexPath.row] objectForKey:@"labelFR"];
         }
@@ -182,6 +186,11 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     
     [self dismissViewControllerAnimated:YES completion:NULL];
     [[self valueForKey:@"popoverController"] dismissPopoverAnimated:YES];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 @end

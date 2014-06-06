@@ -11,7 +11,7 @@
 #import "FromTableViewController.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
-
+#import "NRBlurryStepOutAnimatedTransitioning.h"
 
 @interface ConverterViewController ()
 
@@ -29,6 +29,20 @@
 @synthesize btnDone;
 @synthesize accessoryView;
 
+
+-(void)showDisclaimer:(id)sender;
+{
+    UIStoryboard *storyBoard = self.storyboard;
+    
+    UIViewController *vc = (UIViewController*)[storyBoard
+                                                       instantiateViewControllerWithIdentifier: @"DisclaimerModalView"];
+    vc.transitioningDelegate = self;
+    [self presentViewController:vc animated:YES completion:NULL];
+}
+
+- (IBAction)dismissDisclaimer:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 -(void)loadRates {
     // Create loading view
@@ -96,9 +110,7 @@
 }
 
 - (void)waitForConnection {
-    while(!dataLoaded) {
-        
-    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)checkConnectivity {
@@ -258,9 +270,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-	// Do any additional setup after loading the view, typically from a nib.
-    self.modalPresentationStyle = UIModalPresentationCurrentContext;
-    
     // Dismiss keyboard on background touch
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -288,6 +297,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [[NRBlurryStepOutAnimatedTransitioning alloc] initWithPresenting:YES];
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [[NRBlurryStepOutAnimatedTransitioning alloc] initWithPresenting:NO];
 }
 
 @end

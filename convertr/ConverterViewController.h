@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ConverterViewController.h"
 
-@interface ConverterViewController : UIViewController {
+@interface ConverterViewController : UIViewController<UIViewControllerTransitioningDelegate> {
     UIActionSheet *fromSheet;
     UIActionSheet *toSheet;
     
@@ -62,6 +62,10 @@
 - (IBAction)pressBackspaceButton:(id)sender;
 
 - (IBAction)pressConvertButton:(id)sender;
+
+- (IBAction)showDisclaimer:(id)sender;
+
+- (IBAction)dismissDisclaimer:(id)sender;
 
 - (void)loadRates;
 
